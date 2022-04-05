@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:fetch_posts/post_model.dart';
 import 'package:http/http.dart' as http;
 

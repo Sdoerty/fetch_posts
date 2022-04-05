@@ -35,14 +35,17 @@ class _PostsState extends State<PagePosts> {
                       shrinkWrap: true,
                       itemCount: snapshot.data?.length,
                       itemBuilder: (context, index){
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text("${snapshot.data![index].userId}"),
-                            Text("${snapshot.data![index].id}"),
-                            Text("${snapshot.data![index].title}"),
-                            Text("${snapshot.data![index].body}"),
-                          ],
+                        return Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("User ID: ${snapshot.data![index].userId}"),
+                              Text("Post ID: ${snapshot.data![index].id}"),
+                              Text("Post Title: ${snapshot.data![index].title}"),
+                              Text("Text: ${snapshot.data![index].body}"),
+                            ],
+                          ),
                         );
                       }),
                 );
